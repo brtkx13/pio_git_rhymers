@@ -28,7 +28,7 @@ public class DefaultCountingOutRhymer {
         return numbers[total];
     }
 
-    public final int pop() {
+    public int pop() {
         if (isEmpty())
             return INT1;
         return numbers[total--];
