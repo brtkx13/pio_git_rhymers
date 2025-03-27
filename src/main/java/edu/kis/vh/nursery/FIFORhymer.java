@@ -5,7 +5,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     public DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
     @Override
-    public int pop() {
+    public final int pop() {
         while (!isEmpty())
             temp.push(super.pop());
 
