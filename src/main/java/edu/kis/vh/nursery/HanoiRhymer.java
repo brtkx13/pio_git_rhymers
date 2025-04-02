@@ -7,11 +7,12 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
     public int reportRejected() {
         return totalRejected;
     }
-
-    public void push(int in) {
+    @Override
+    public void countIn(int in) {
         if (!isEmpty() && in > peek())
             totalRejected++;
         else
-            super.push(in);
+            super.countIn(in);
     }
+
 }
