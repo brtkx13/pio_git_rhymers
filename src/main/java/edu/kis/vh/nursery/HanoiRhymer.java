@@ -8,10 +8,12 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
         return totalRejected;
     }
 
-    public void push(int in) {
-        if (!isEmpty() && in > peek())
+    @Override
+    public void countIn(int in) {
+        if (!callCheck() && in > peekaboo())
             totalRejected++;
         else
-            super.push(in);
+            super.countIn(in);
     }
+
 }
