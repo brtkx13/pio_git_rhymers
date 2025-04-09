@@ -9,17 +9,6 @@ public class DefaultCountingOutRhymer {
     private static final int RETURN_EMPTY = -1;
     private int total = RETURN_EMPTY;
 
-    public static int getMaxStackCapacity() {
-        return MAX_CAPACITY;
-    }
-
-    public static int getInvalidStackValue() {
-        return INVALID_STACK_VALUE;
-    }
-
-    public static int getEmptyStackIndicator() {
-        return RETURN_EMPTY;
-    }
 
     public int getTotal() {
         return total;
@@ -50,13 +39,4 @@ public class DefaultCountingOutRhymer {
             return INVALID_STACK_VALUE;
         return numbers[total--];
     }
-
-    public int[] getNumbers() {
-        return numbers;
-    }
-
-    public void setTotal(int total) {
-        this.total = total;
-    }
-
 }
